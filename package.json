@@ -39,7 +39,8 @@
     "install:prod": "npm ci",
     "prune:prod": "npm prune --production",
     "refresh-package-locks": "npm run clean && find . -iname package-lock.json -delete && npm install",
-    "interactive-publish": "npm run build && np"
+    "interactive-publish": "npm run build && np",
+    "postinstall": "npm run build"
   },
   "repository": {
     "type": "git",
