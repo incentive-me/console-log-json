@@ -398,7 +398,7 @@ let packageName: string = '';
  * @param {LOG_LEVEL} level - LOG_LEVEL
  */
 export function logUsingWinston(args: any[], level: LOG_LEVEL) {
-  if (packageName.length === 0) {
+  if (!packageName || packageName.length === 0) {
     args.push({ '@packageName': '<not-yet-set> Please await the call LoggerAdaptToConsole() on startup' });
   } else {
     args.push({ '@packageName': packageName });
